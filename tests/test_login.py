@@ -1,14 +1,27 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By 
+from pages.login_page import LoginPage
 import pytest
 from time import sleep
 
-def test_login(driver):
-
-    driver.find_element(By.XPATH,"//input[@name='username']").send_keys("Admin") #By.XPATH
-    driver.find_element(By.XPATH,"//input[@name='password']").send_keys("admin123")
-    #click button login
-    driver.find_element(By.XPATH, "//button[@type='submit']").click() 
-    sleep(5)
-    assert driver.find_element(By.XPATH, "//h6").text == 'Dashboard'
+class TestLogin():
+    def test_login_pass(self,driver):
+        login = LoginPage(driver)
+        login.do_login("Admin","admin123")
+        assert driver.find_element(By.XPATH, "//h6").text == 'Dashboard'
     
+    def test_login_wrong_password(self,driver):
+        login = LoginPage(driver)
+        login.do_login("Admin","admin124")
+        assert driver.find_element(By.XPATH, "//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")
+
+    def test_login_wrong_username(self,driver):
+        login = LoginPage(driver)
+        login.do_login("asdd","admin123")
+        assert driver.find_element(By.XPATH, "//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")
+    
+    def test_login_wrong_username_password(self, driver):
+        login = LoginPage(driver)
+        login.do_login("asdffdf","23686efhd")
+        assert driver.find_element(By.XPATH, "//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")
+
