@@ -8,6 +8,8 @@ def driver():
     driver = webdriver.Chrome()
     driver.implicitly_wait(10) #thời gian chờ tương tác với mỗi text box
     driver.maximize_window()
+    # base_url = "https://the-internet.herokuapp.com/dropdown"
+   
     base_url = ConfigReader.get_base_url()
 
     # base_url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
