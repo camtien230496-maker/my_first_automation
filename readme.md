@@ -6,7 +6,7 @@ git add .
 git status
 git config --global user.email "camtien230496@gmail.com"
 git config --global user.name "TienChau"
-git commit -m "30122025"
+git commit -m "13012026"
 git push
 
 
@@ -52,4 +52,27 @@ D. Điều hướng trong cây DOM
 E. Tips khi viết XPath trong automation
 1. Tránh dùng XPath quá dài vì dễ bị vỡ khi UI thay đổi.
 2. Ưu tiên dùng id, name, data-* nếu có.
-3. Dùng contains() hoặc starts-with() để tăng tính linh hoạt.
+3. Dùng contains() hoặc starts-with() để tăng tính linh hoạt.
+
+
+
+
+Vân Hoàng:
+Câu 1: 
+download chrome option ngăn chặn selenium pop up
+
+Câu 2:
+
+..... PROMT......COPILOT..........
+1. 
+https://the-internet.herokuapp.com/login
+hãy viết hàm login test với url này:
+sau đó dùng hàm submit() của selenium để login thành công
+bổ sung phần webdriverwait để đảm bảo element đủ thời gian load
+
+2.
+https://www.letskodeit.com/practice
+hãy code 1 script vào url trên và làm các bước sau:
+click open window
+switch qua new window
+maximize new window và add sleep 5 seconds
