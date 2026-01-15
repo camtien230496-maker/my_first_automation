@@ -76,3 +76,8 @@ hãy code 1 script vào url trên và làm các bước sau:
 click open window
 switch qua new window
 maximize new window và add sleep 5 seconds
+
+
+@pytest.mark.api TRƯỚC CLASS
+========RUN API TEST=========
+pytest -m api -s

@@ -15,7 +15,11 @@ class ConfigReader:
     @staticmethod
     def get_base_url():
         return ConfigReader.load_config()['base_url']
-    
+
+    @staticmethod
+    def get_api_url():
+        return ConfigReader.load_config()['api_url']
+
     @staticmethod
     def get_username():
         return ConfigReader.load_config()['credentials']['username']

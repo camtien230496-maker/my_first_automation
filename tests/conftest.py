@@ -5,9 +5,8 @@ from utils.config_reader import ConfigReader
 @pytest.fixture(scope="function")
 def driver():
     #Đây là setup driver cho các test script dùng & chỉ setup 1 lần duy nhất
-    options = webdriver.ChromeOptions()
-    options.add_argument("--start-maximized")
-    driver = webdriver.Chrome(options=options)
+
+    driver = webdriver.Chrome()
     driver.implicitly_wait(10) #thời gian chờ tương tác với mỗi text box
     driver.maximize_window()
     # base_url = "https://the-internet.herokuapp.com/dropdown"
