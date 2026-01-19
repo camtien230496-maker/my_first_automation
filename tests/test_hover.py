@@ -18,6 +18,7 @@ class TestDemoqaHover:
         # đợi sub-menu hiện ra rồi hover vào sub-item (ví dụ 'Sub Item' hoặc 'Sub Sub Item 1')
         sub_item = wait.until(EC.visibility_of_element_located((By.XPATH, "//a[text()='Sub Item']")))
         actions.move_to_element(sub_item).perform()
+        sub_item.click()
 
         # giữ 5 giây để quan sát
         time.sleep(5)

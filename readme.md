@@ -1,3 +1,4 @@
+=====  PUSH CODE ========
 git init
 git remote origin https://github.com/camtien230496-maker/my_first_automation
 git branch -M main
@@ -10,10 +11,28 @@ git commit -m "13012026"
 git push
 
 
+====== TAO VENV =======
+python -m venv .venv
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+.\.venv\Scripts\Activate.ps1
+python -m pip install -upgrade pip
+pip install selenium pytest
+
+==> run test:
+pytest .\test_login01.py
+
+====== API =======
+@pytest.mark.api TRƯỚC CLASS
+========RUN API TEST=========
+pytest -m api -s
+
+
+===== INSTALL REQUESTS =====
+pip install requests
 
 
 
-s
+================================================================================================
 1. Dấu / - đi từ cấp hiện tại đến cấp con trực tiếp
 Chọn phần tử con trực tiếp của phần tử hiện tại.
 /html/body/div
@@ -27,17 +46,21 @@ A.Cú pháp cơ bản của XPath
 //input
 //button
 //div
+
 2.Chọn theo thuộc tính:
 //input[@id='username']            → chọn input có id là 'username'
 //button[@type='submit']              → chọn button có type là 'submit'
+
 3.Chọn theo nhiều điều kiện:
 //input[@type='text' and @name='email']
+
 B. Hàm hỗ trợ trong XPath
 1.contains() – chứa chuỗi:
 //div[contains(@class, 'login-box')]
 2.text() – chọn theo nội dung văn bản:
 //button[text()='Login']
 //span[contains(text(), 'Welcome')]
+
 C. Chọn theo vị trí
 Chọn phần tử đầu tiên, cuối cùng, hoặc theo chỉ số:
 (//input[@type='text'])[1]   -> phần tử đầu tiên
@@ -53,7 +76,7 @@ E. Tips khi viết XPath trong automation
 1. Tránh dùng XPath quá dài vì dễ bị vỡ khi UI thay đổi.
 2. Ưu tiên dùng id, name, data-* nếu có.
 3. Dùng contains() hoặc starts-with() để tăng tính linh hoạt.
-
+========================================================================================
 
 
 
@@ -78,6 +101,3 @@ switch qua new window
 maximize new window và add sleep 5 seconds
 
 
-@pytest.mark.api TRƯỚC CLASS
-========RUN API TEST=========
-pytest -m api -s
