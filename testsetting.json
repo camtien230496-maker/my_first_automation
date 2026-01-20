@@ -5,6 +5,7 @@
         "username": "Admin",
         "password": "admin123"
     },
+    "headless": true,
     "timeout": {
         "implicit":10
     }
