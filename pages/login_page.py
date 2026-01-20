@@ -11,6 +11,8 @@ class LoginPage(BasePage):
         self.__password = (By.NAME, "password")
         self.login_btn = (By.XPATH, "//button[@type='submit']")
 
+    def get_headless(self):
+        return self.driver.headless
 
     def enter_username(self, username):
         self.find_element(self.__username).send_keys(username)
