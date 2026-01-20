@@ -6,6 +6,7 @@ import pytest
 from time import sleep
 
 class TestLogin():
+    @pytest.mark.smoke
     def test_login_pass(self,driver):
         login = LoginPage(driver)
         login.do_login(ConfigReader.get_username(),ConfigReader.get_password())
