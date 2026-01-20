@@ -13,6 +13,10 @@ class ConfigReader:
         return ConfigReader._config
    
     @staticmethod
+    def get_headless():
+        return ConfigReader.load_config()['headless']
+
+    @staticmethod
     def get_base_url():
         return ConfigReader.load_config()['base_url']
 
