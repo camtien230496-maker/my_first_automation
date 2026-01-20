@@ -30,7 +30,7 @@ jobs:
         run: mkdir -p report
 
       - name: Run tests
-        run: pytest -m smoke --html=report/report.html --self-contained-html
+        run: pytest -m smoke --html=report/report.html --self-contained-html #chạy bộ test smoke
 
       - name: Upload file report
         if: always()
