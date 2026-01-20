@@ -1,5 +1,4 @@
 name: Run Selenium Pytest
-
 on:
   push:
     branches: [ main ]
