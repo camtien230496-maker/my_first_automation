@@ -26,7 +26,7 @@ git add .
 git status
 git config --global user.email "camtien230496@gmail.com"
 git config --global user.name "TienChau"
-git commit -m "20012026"
+git commit -m "22012026"
 git push
 
 
@@ -47,7 +47,6 @@ pytest .\test_login01.py
 ========RUN API TEST=========
 pytest -m api -s
 
-pytest tests/test_login.py --html=report/report.html
 
 
 
